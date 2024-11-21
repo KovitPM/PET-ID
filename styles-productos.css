@@ -1,0 +1,254 @@
+:root {
+    --dark-blue: #004aad;
+    --light-blue: #E6F3FF;
+    --paw-blue: #1E90FF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--dark-blue);
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.logo {
+    height: 90px;
+}
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    gap: 10rem;
+}
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+}
+.nav-link:hover {
+    border-bottom: 3px solid #ff5055; /* Línea amarilla debajo del enlace */
+}
+#menu-toggle, .hamburger {
+    display: none;
+}
+
+main {
+    flex-grow: 1;
+    background-color: var(--light-blue);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.contenido{
+    max-width: 1200px;
+    width: 100%;
+    margin: 40px auto;
+    display: flex;
+}
+.mostrador{
+    width: 100%;
+    transition: .5s ease;
+}
+.mostrador .fila{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.mostrador .fila .item{
+    max-width: 210px;
+    padding: 30px;
+    height: 250px;
+    /*border: 2px solid red;*/
+    text-align: center;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: .3s;
+}
+.mostrador .fila .item:hover{
+    background-color: #e6e6e6;
+}
+.mostrador .fila .item img{
+    width: 100%;
+    margin: 30px 0;
+}
+.mostrador .fila .item .descripcion{
+    color: #707070;
+    font-weight: bold;
+}
+.mostrador .fila .item .precio{
+    color: #f85151;
+    font-weight: bold;
+    font-size: 20px;
+}
+.seleccion{
+    transition: .5s ease;
+    opacity: 0;
+    width: 0%;
+    border: 1px solid #ccc;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    height: 600px;
+}
+.cerrar{
+    position: absolute;
+    right: 0;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.info{
+    padding: 20px;
+}
+.info img{
+    display: block;
+    margin: 30px auto;
+    width: 80%;
+}
+.info h2{
+    color: #707070;
+    margin-bottom: 10px;
+}
+.info p{
+    font-size: 14px;
+    color: #707070;
+    margin-bottom: 10px;
+}
+.info .precio{
+    font-size: 30px;
+    font-weight: bold;
+    color: #f85151;
+    margin-bottom: 10px;
+    display: block;
+}
+.info .fila{
+    display: flex;
+    align-items: flex-end;
+}
+.info .fila label{
+    display: block;
+    margin-bottom: 10px;
+}
+.info .fila select{
+    width: 100px;
+    font-size: 18px;
+    padding: 6px;
+    margin-right: 30px;
+    margin-bottom: 10px;
+}
+button{
+    height: 50px;
+    border: none;
+    padding: 0 10px;
+    color: #fff;
+    background-color: #f85151;
+    
+}
+
+.intro {
+    background-color: #add8e6;
+    padding: 2rem;
+    border-radius: 1rem;
+    max-width: 900px;
+    text-align: center;
+    justify-content: center;
+}
+
+.paw {
+    position: absolute;
+    opacity: 0.3;
+    transition: opacity 0.5s;
+    background-image: url('https://clipart-library.com/images/Biarno86T.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+footer {
+    background-color: var(--dark-blue);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/*mediaquery para Celulares*/
+@media screen and (max-width: 834px) {
+    .navbar-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+        margin: 0 auto;
+        gap: 1rem;
+    }
+    .nav-menu {
+        display: flex;
+        list-style: none;
+        font-size: 15px
+    }
+    .nav-link {
+        color: #fff;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        transition: background-color 0.3s ease;
+    }
+    .intro {
+        background-color: #add8e6;
+        padding: 1rem;
+        border-radius: 1rem;
+        max-width: 300px;
+        text-align: center;
+    }
+    .masco{
+        width: 120px; 
+        height: auto; 
+        filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.271));
+    }
+    footer {
+        font-size: 10px;
+        padding: .2rem;
+    }
+
+    .mostrador .fila{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+        flex-direction: column;
+    }
+    .seleccion{
+        height: 450px;
+    }
+}

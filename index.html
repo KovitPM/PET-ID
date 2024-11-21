@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PET-ID</title>
+    <link rel="stylesheet" href="styles-index.css">
+    <link rel="icon" href="imagenes/PET-ID.ico" type="imagen">
+</head>
+<body>
+    <header>
+        <div class="navbar-container">
+            <a href="index.html">
+            <img class="logo" src="imagenes/1PET-ID.png" alt="Logo PET-ID" class="logo">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="productos.html" class="nav-link">Productos</a></li>
+                <li><a href="mascota.html" class="nav-link">Mi mascota</a></li>
+                <li><a href="nosotros.html" class="nav-link">Nosotros</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="intro">
+            <p>Bienvenido a PET-ID, tu solución integral para el cuidado y seguimiento de mascotas. Nuestro objetivo es proporcionar a los dueños de mascotas las herramientas necesarias para garantizar la seguridad y bienestar de sus compañeros peludos.</p>
+            <div class="IMG" style="display: flex; justify-content: center; margin-top: 20px; gap: 1rem;">
+                <img class="masco" src="imagenes/gato1.jfif" 
+                     alt="Mascotas" > <!-- Imagen de "index.png" centrada y con sombra. -->
+                     <img class="masco" src="imagenes/gato2.jfif" 
+                     alt="Mascotas">
+            </div>
+            <div class="IMG" style="display: flex; justify-content: center; margin-top: 20px; gap: 1rem;">
+                <img class="masco" src="imagenes/perro1.jfif" 
+                     alt="Mascotas"> <!-- Imagen de "index.png" centrada y con sombra. -->
+                     <img class="masco" src="imagenes/perro2.jfif" 
+                     alt="Mascotas">
+            </div>
+            
+        </div>
+
+
+        <button class="chatbot-toggler">
+            <span class="material-symbols-rounded">CHAT</span>
+            <span class="material-symbols-outlined">close</span>
+          </button>
+          <div class="chatbot">
+            <header>
+              <h2>Pet-Bot</h2>
+              <span class="close-btn material-symbols-outlined">close</span>
+            </header>
+            <ul class="chatbox">
+              <li class="chat incoming">
+                <span class="material-symbols-outlined">PET-ID</span>
+                <p>Hola, ¿Cómo te puedo ayudar?</p>
+              </li>
+            </ul>
+            <div class="chat-input">
+              <div class="chat-btn-container">
+                <button class="chat-btn" data-question="¿Qué productos ofrece Pet-Id?">¿Qué productos ofrece Pet-Id?</button>
+                <button class="chat-btn" data-question="¿Cómo funciona el collar con QR?">¿Cómo funciona el collar con QR?</button>
+                <button class="chat-btn" data-question="¿Qué debo hacer si mi mascota está perdida?">¿Qué debo hacer si mi mascota está perdida?</button>
+              </div>
+            </div>
+          </div>
+
+
+    </main>
+    <footer>
+        <p>© 2024 PET-ID. Todos los derechos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

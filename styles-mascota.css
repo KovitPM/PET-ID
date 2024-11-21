@@ -1,0 +1,224 @@
+:root {
+    --dark-blue: #004aad;
+    --light-blue: #E6F3FF;
+    --paw-blue: #1E90FF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--dark-blue);
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.logo {
+    height: 90px;
+}
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    gap: 10rem;
+}
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+}
+.nav-link:hover {
+    border-bottom: 3px solid #ff5055; /* Línea amarilla debajo del enlace */
+}
+#menu-toggle, .hamburger {
+    display: none;
+}
+
+main {
+    flex-grow: 1;
+    background-color: var(--light-blue);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.paw {
+    position: absolute;
+    opacity: 0.3;
+    transition: opacity 0.5s;
+    background-image: url('https://clipart-library.com/images/Biarno86T.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Estilos para el formulario de login/signup */
+.form-container {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    margin: 2rem auto;
+}
+
+.form-tabs {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.tab-button {
+    flex: 1;
+    padding: 0.5rem;
+    background-color: var(--light-blue);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: var(--dark-blue);
+    font-weight: bold;
+}
+
+.tab-button.active {
+    background-color: var(--dark-blue);
+    color: white;
+}
+
+.form {
+    display: none;
+}
+
+.form.active {
+    display: block;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--dark-blue);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--light-blue);
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    border-color: var(--dark-blue);
+    outline: none;
+}
+
+.form button[type="submit"] {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--dark-blue);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form button[type="submit"]:hover {
+    background-color: var(--paw-blue);
+}
+
+
+footer {
+    background-color: var(--dark-blue);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+
+
+/*mediaquery para Celulares*/
+@media screen and (max-width: 834px) {
+    .navbar-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+        margin: 0 auto;
+        gap: 1rem;
+    }
+    .nav-menu {
+        display: flex;
+        list-style: none;
+        font-size: 15px
+    }
+    .nav-link {
+        color: #fff;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        transition: background-color 0.3s ease;
+    }
+    .intro {
+        background-color: #add8e6;
+        padding: 1rem;
+        border-radius: 1rem;
+        max-width: 300px;
+        text-align: center;
+    }
+    .masco{
+        width: 120px; 
+        height: auto; 
+        filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.271));
+    }
+    .form-container {
+        padding: 1rem;
+        margin: 1rem auto;
+    }
+
+    .tab-button {
+        font-size: 14px;
+    }
+
+    .form-group label {
+        font-size: 14px;
+    }
+
+    .form-group input {
+        font-size: 14px;
+    }
+
+    .form button[type="submit"] {
+        font-size: 14px;
+    }
+    footer {
+        font-size: 10px;
+        padding: .2rem;
+    }
+
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contenido</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Página de Firu Lais</h1>
+        <div id="contenidoNormal">
+            <img src="https://via.placeholder.com/150" alt="Foto de perfil" class="profile-pic">
+            <h2>Hola Soy Firu Lais</h2>
+            <p>Te invito a comprar una identidad a tu masconta en <a href="https://kovitpm.github.io/PET-ID/index.html" style="text-decoration: underline;">PET-ID</a></p>
+        </div>
+        <div id="contenidoEspecial" style="display: none;">
+            <img src="https://via.placeholder.com/150" alt="Foto de perfil" class="profile-pic">
+            <h2>Hola Soy Firu Lais</h2>
+            <p>Podrias ayudarme a llegar a casa</p>
+            <p>¿Puedes mandar mi ubicación y una foto mía donde me encuentro?</p>
+            <div id="chat" class="chat-container">
+                <div id="chatMessages" class="chat-messages" aria-live="polite"></div>
+                <form id="chatForm" class="chat-form">
+                    <input type="text" id="messageInput" placeholder="Escribe donde me has visto..." aria-label="Escribe un mensaje">
+                    <button type="button" id="locationButton" aria-label="Compartir ubicación">📍</button>
+                    <label for="imageInput" class="image-upload-label" aria-label="Subir imagen">📷</label>
+                    <input type="file" id="imageInput" accept="image/*" aria-label="Subir imagen">
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script-percon.js"></script>
+</body>
+</html>
